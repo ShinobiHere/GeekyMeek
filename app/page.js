@@ -3,7 +3,7 @@ import { client, urlFor } from "./lib/sanity"
 import Image from "next/image"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+export const revalidate = 5;
 async function getData() {
   const query = `
   *[_type == 'blog'] | order(_createdAt desc){

@@ -1,7 +1,7 @@
 import { client, urlFor } from "@/app/lib/sanity"
 import { PortableText } from "next-sanity"
 import Image from "next/image"
-
+export const revalidate = 5;
 async function getData(slug) {
     const query = `
     *[_type == 'blog' && slug.current == "${slug}"]{
